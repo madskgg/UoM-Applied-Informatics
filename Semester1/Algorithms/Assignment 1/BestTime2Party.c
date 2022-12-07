@@ -19,7 +19,7 @@ int main()
 
     char bands[size][LENGTH];
     double hours[size][COL];
-    int perfTime[HOURSGAP]= {0,0,0,0,0,0};;
+    int perfTime[HOURSGAP]= {0,0,0,0,0,0};
 
     ReadData(size, bands, hours);
     Frequency(size, hours, perfTime);
