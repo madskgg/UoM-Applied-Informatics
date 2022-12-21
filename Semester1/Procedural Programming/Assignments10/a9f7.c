@@ -1,7 +1,7 @@
 #include <stdio.h>
+#include <string.h>
 #include "genlib.h"
 #include "simpio.h"
-#include <string.h>
 
 void DateString(int day, int month, int year, char date[10]);
 
@@ -9,7 +9,6 @@ int main()
 {
     int day, month, year;
     char date[10];
-
 
     printf("Dwse thn hmera: ");
     day=GetInteger();
@@ -23,7 +22,6 @@ int main()
 
     return 0;
 }
-
 
 void DateString(int day, int month, int year, char date[10]) {
   char monthStr[10];
@@ -69,9 +67,6 @@ void DateString(int day, int month, int year, char date[10]) {
 
   int i = 0;
 
-  if (day < 10) {
-    date[i++] = '0';
-  }
   int dayLength = sprintf(&date[i], "%d", day);
   i += dayLength;
 

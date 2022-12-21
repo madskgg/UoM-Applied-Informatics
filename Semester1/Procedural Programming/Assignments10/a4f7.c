@@ -13,8 +13,10 @@ int main()
 
     char tab[L+1];
     digitNum = FindDigitNums(num);
+
     char numStr[digitNum+1];
     itoa(num, numStr, 10);
+
     if (digitNum<L)
     {
         i=0;
