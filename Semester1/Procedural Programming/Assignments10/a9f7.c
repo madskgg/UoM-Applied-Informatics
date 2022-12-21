@@ -75,8 +75,8 @@ void DateString(int day, int month, int year, char date[10]) {
   i += 3;
 
   date[i++] = '-';
-  int yearLength = sprintf(&date[i], "%02d", year % 100);
-  i += yearLength;
+  sprintf(&date[i], "%02d", year % 100);
+  i += 2;
 
   date[i] = '\0';
 }
