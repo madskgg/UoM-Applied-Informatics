@@ -53,7 +53,7 @@ int get_data(car_rentalT rentals[])
 
     for (i = 0; i<num_rentals; i++)
     {
-        printf("\nDose ta stoixeia tis enoikiasis: %d\n", i);
+        printf("\nDose ta stoixeia tis enoikiasis %d\n", i);
         rentals[i].number = i;
 
         printf("Dose marka: ");
