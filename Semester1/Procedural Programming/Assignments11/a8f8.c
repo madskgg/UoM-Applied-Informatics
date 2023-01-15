@@ -56,7 +56,7 @@ void calc_box_volume(box *a_box)
 
 void calc_box_area(box *a_box)
 {
-    a_box->area = 2*(a_box->width * a_box->height + a_box->height * a_box->depth + a_box->depth * a_box->width);
+    a_box->area = 2*(a_box->width * a_box->depth + a_box->width * a_box->height + a_box->depth * a_box->height);
 }
 
 void calc_box_volume(box *a_box)
