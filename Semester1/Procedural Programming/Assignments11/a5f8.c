@@ -41,7 +41,7 @@ void readData(int num, infoT sellers[])
         printf("Onomatepwnymo? ");
         gets(sellers[i].surname);
         printf("Poso pwlhsewn? ");
-        sellers[i].total_sales = GetReal();
+        sellers[i].total_sales = GetLong();
         printf("Kwdikos (1= Thes/niki, 2= Athens, 3= Volos, 4= Hrakleio)? ");
         sellers[i].area = GetInteger();
     }
