@@ -21,7 +21,7 @@ int main()
     long total[4]={0,0,0,0};
     infoT sellers[N];
 
-    printf("Dwse to plhthos twn polhtwn? ");
+    printf("Dwse to plhthos twn pwlhtwn? ");
     num = GetInteger();
     readData(num, sellers);
     calculateTotal(num, sellers, total);
