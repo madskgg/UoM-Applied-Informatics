@@ -22,7 +22,7 @@ void readFromFile(FILE* infile, playerT players[], int* playerCount)
         nscan = fscanf(infile, "%d,%28[^,],%d%c", &number, name, &points, &termch);
         if (nscan == EOF) break;
 
-        if (nscan!=4 || termch!='\n')
+        if (nscan!=3 || termch!='\n')
         {
             printf("Error in line %d. Program termination\n", playerCount);
             exit(1);
