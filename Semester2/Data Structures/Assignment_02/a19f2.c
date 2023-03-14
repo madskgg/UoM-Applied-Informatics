@@ -39,7 +39,7 @@ int main()
     TraverseStack(S);
 
     printf("Min: %d\n", minElement(&S));
-    printf("Min: %d\n", maxElement(&S));
+    printf("Max: %d\n", maxElement(&S));
 
     TraverseStack(S);
     return 0;
