@@ -84,23 +84,15 @@ int main()
 
     printf("Question H\n");
     if(EmptyList(AList))
-    {
         printf("Empty List\n");
-    }
     else
-    {
         printf("Not an Empty List\n");
-    }
 
     printf("Question I\n");
     if(FullList(FreePtr))
-    {
         printf("Full List\n");
-    }
     else
-    {
         printf("Not a Full List\n");
-    }
 
     printf("Question J\n");
     printf("Search for a number\n");
@@ -111,13 +103,9 @@ int main()
 
         found=Search(FreePtr, AList, Node, AnItem, &PredPtr);
         if(found)
-        {
             printf("The number is in the list and its predecessor is in position %d\n",PredPtr);
-        }
         else
-        {
             printf("The number is not in the list\n");
-        }
     }
 
     return 0;
