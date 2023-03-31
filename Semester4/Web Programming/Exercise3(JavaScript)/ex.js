@@ -20,7 +20,7 @@ function findLargest(a, b, c) {
 
 console.log(`Κλήση συνάρτησης με ορίσματα: 10, 14, 9`);
 console.log(findLargest(10, 14, 9));
-console.log(`calling the function with arguments 'aa', 'ba', 'ca'`);
+console.log(`Κλήση συνάρτησης με ορίσματα: 'aa', 'ba', 'ca'`);
 console.log(findLargest('aa', 'ba', 'ca')); 
 
 // Άσκηση 3
