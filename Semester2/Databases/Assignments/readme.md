@@ -1,4 +1,4 @@
-## [Εκφωνήσεις - Homework 1](/HW_1)
+## [Εκφωνήσεις - Homework 1](/Semester2/Databases/Assignments/HW_1)
 
 DISCLAIMER: Waiting for correct answers
 
