@@ -3,5 +3,6 @@
 ***
 Επισκεφτείτε το [my.uom.gr](https://my.uom.gr) ή την ιστοσελίδα της σχολής [εδώ](https://www.uom.gr/dai) για περισσότερες πληροφοριές!
 ***
+**DISCLAIMER:** Όλες οι εργασίες ανεβαίνουν μετά το πέρας της προθεσμίας υποβολής  τους. 
+<br>
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/madskgg/UoM-AppliedInformatics">
-**DISCLAIMER:** Όλες οι εργασίες ανεβαίνουν μετά το πέρας της προθεσμίας υποβολής  τους.
