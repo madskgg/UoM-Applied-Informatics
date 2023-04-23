@@ -49,3 +49,6 @@ DISCLAIMER: Waiting for correct answers
 Σας δίνονται δυο διαγράμματα ΟΣ. Για το καθένα διάγραμμα να δώσετε το αντίστοιχο σχεσιακό σχήμα.
 Για το πρώτο σχεσιακό σχήμα, δώστε επιπλέον και τον SQL κώδικα που το υλοποιεί σε φυσικό σχήμα.
 Αποφασίστε για τα κατάλληλα πεδία ορισμού των γνωρισμάτων των πινάκων.
+
+![ask1](https://github.com/madskgg/UoM-Applied-Informatics/tree/main/Semester2/Databases/Assignments/HW_2/1.png)
+![ask2](https://github.com/madskgg/UoM-Applied-Informatics/tree/main/Semester2/Databases/Assignments/HW_2/2.png)
