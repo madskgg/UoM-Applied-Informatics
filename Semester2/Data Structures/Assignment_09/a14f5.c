@@ -61,14 +61,15 @@ int main()
         RecBSTInsert(&ARoot, EmpRec);
         getchar();
     }
+
     // 4
     printf("\nGive teacher full name to search: ");
     gets(EmpRec.name);
     RecBSTSearch(ARoot, EmpRec, &found, LocPtr);
     if (found)
-        printf("%s,%s, %d\n", (*LocPtr)->Data.name, (*LocPtr)->Data.phone, (*LocPtr)->Data.code);
+        printf("%s, %s, %d\n", (*LocPtr)->Data.name, (*LocPtr)->Data.phone, (*LocPtr)->Data.code);
     else
-        printf("\nTeacher Not Found");
+        printf("\nTeacher Not Found\n");
 
     // 5
     printf("\nGive code to search: ");
@@ -174,7 +175,7 @@ void RecBSTInorder(BinTreePointer Root)
     if (Root)
     {
         RecBSTInorder(Root->LChild);
-        printf("%s,%s, %d\n", Root->Data.name, Root->Data.phone, Root->Data.code);
+        printf("%s, %s, %d\n", Root->Data.name, Root->Data.phone, Root->Data.code);
         RecBSTInorder(Root->RChild);
     }
 }
@@ -193,7 +194,7 @@ void BuildBST(BinTreePointer *Root)
     }
     while (1)
     {
-        nscan = fscanf(fp, "%[^,],%[^,],%d%c", EmpRec.name, EmpRec.phone, &EmpRec.code, &termch);
+        nscan = fscanf(fp, "%[^,], %[^,],%d%c", EmpRec.name, EmpRec.phone, &EmpRec.code, &termch);
         if (nscan == EOF)
             break;
         if (nscan == 4 && termch == '\n')
@@ -214,7 +215,7 @@ void RecBSTSearchBySubject(BinTreePointer Root, int code)
         RecBSTSearchBySubject(Root->LChild, code);
         if (Root->Data.code == code)
         {
-            printf("%s,%s, %d\n", Root->Data.name, Root->Data.phone, Root->Data.code);
+            printf("%s, %s, %d\n", Root->Data.name, Root->Data.phone, Root->Data.code);
         }
         RecBSTSearchBySubject(Root->RChild, code);
     }
