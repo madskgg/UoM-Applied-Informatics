@@ -186,7 +186,7 @@ void BuildBST(BinTreePointer *Root)
     Teacher EmpRec;
     int nscan;
     char termch;
-    fp = fopen("I14F5.txt", "r");
+    fp = fopen("I14F5.TXT", "r");
     if (fp == NULL)
     {
         printf("Error opening file\n");
