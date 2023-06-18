@@ -1,0 +1,55 @@
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.butt {
+  width: 180px;
+  margin: 0px 20px 230px 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-style: solid;
+  background-color: #ccc;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.butt:hover {
+  background-color: #999;
+}
+
+#square {
+  width: 300px;
+  height: 300px;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.corner-top-left {
+  border-top-left-radius: 30%;
+}
+
+.corner-bottom-left {
+  border-bottom-left-radius: 30%;
+}
+
+.corner-top-right {
+  border-top-right-radius: 30%;
+}
+
+.corner-bottom-right {
+  border-bottom-right-radius: 30%;
+}
