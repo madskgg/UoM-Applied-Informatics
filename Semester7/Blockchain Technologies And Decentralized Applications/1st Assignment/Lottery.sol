@@ -122,12 +122,6 @@ contract Lottery {
         _;
     }
 
-    // Modifier για τον έλεγχο του ποσού πληρωμής
-    modifier hasMoney {
-        require(msg.value >= 0.005 ether,"You do NOT have enough ethers!");
-        _;
-    }
-
     // Modifier για να ελέγχει απομένουν αρκετά tokens στον παίκτη
     modifier hasTokens(uint _count) {
         require(tokenDetails[msg.sender].remainingTokens >= _count, "You do NOT have enough tokens!");
