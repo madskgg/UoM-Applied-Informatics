@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_00yvsnb" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Web Modeler" exporterVersion="0d4ab51" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.6.0">
+  <decision id="Decision_1e7szdu" name="ΛΗΨΗ ΑΠΟΔΟΧΩΝ ΕΡΓΑΖΟΜΕΝΩΝ ΦΟΙΤΗΤΩΝ">
+    <informationRequirement id="InformationRequirement_0hfap2j">
+      <requiredDecision href="#Decision_0jn15sx" />
+    </informationRequirement>
+    <authorityRequirement id="AuthorityRequirement_1ym4pui">
+      <requiredAuthority href="#KnowledgeSource_1jh33jw" />
+    </authorityRequirement>
+    <decisionTable id="DecisionTable_0r0sp93">
+      <input id="Input_1">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" typeRef="string" />
+    </decisionTable>
+  </decision>
+  <knowledgeSource id="KnowledgeSource_1jh33jw" name="ΝΟΜΟΘΕΣΙΑ" />
+  <decision id="Decision_0jn15sx" name="ΑΠΟΦΑΣΗ ΕΠΙΧΟΡΗΓΗΣΗΣ">
+    <informationRequirement id="InformationRequirement_11v967e">
+      <requiredInput href="#InputData_067e4h9" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0a32ckv">
+      <requiredInput href="#InputData_0hzjido" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1nqb0by">
+      <requiredInput href="#InputData_1vbn4bc" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_08w3ptd">
+      <requiredInput href="#InputData_0uw2ece" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0xzgsk6">
+      <requiredInput href="#InputData_16po9ij" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1caku4f">
+      <input id="InputClause_1acty4a">
+        <inputExpression id="LiteralExpression_15xdydh" typeRef="string" />
+      </input>
+      <output id="OutputClause_059xzh0" typeRef="string" />
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_067e4h9" name="ΒΕΒΑΙΩΣΗ ΕΡΓΟΔΟΤΗ" />
+  <inputData id="InputData_0hzjido" name="ΔΕΛΤΙΟ ΑΣΤΥΝΟΜΙΚΗΣ ΤΑΥΤΟΤΗΤΑΣ" />
+  <inputData id="InputData_1vbn4bc" name="ΒΕΒΑΙΩΣΗ ΑΕΙ" />
+  <inputData id="InputData_0uw2ece" name="ΛΟΓΑΡΙΑΣΜΟΣ ΤΡΑΠΕΖΗΣ" />
+  <inputData id="InputData_16po9ij" name="ΑΤΟΜΙΚΟΣ ΛΟΓΑΡΙΑΣΜΟΣ ΑΣΦΑΛΙΣΗΣ" />
+  <textAnnotation id="TextAnnotation_0xwre2l">
+    <text>-  Νόμος 1346/1983 (ΦΕΚ 46/Α) Άρθρα 2
+-  Κοινή Υπουργική Απόφαση 13908/21/2021 (ΦΕΚ 1521/Β)
+-  Κοινή Υπουργική Απόφαση 33894/1998 (ΦΕΚ 1276/Β)
+-  Κοινή Υπουργική Απόφαση 34651/1996 (ΦΕΚ 1122/Β)
+-  Κοινή Υπουργική Απόφαση 31930/1983 (ΦΕΚ 444/Β)</text>
+  </textAnnotation>
+  <association id="Association_1ghpe2a">
+    <sourceRef href="#TextAnnotation_0xwre2l" />
+    <targetRef href="#KnowledgeSource_1jh33jw" />
+  </association>
+  <textAnnotation id="TextAnnotation_0bu6lj8">
+    <text>με το λογότυπο της εταιρείας, υπογεγραμμένη και σφραγισμένη από τον εργοδότη, όπου υποχρεωτικά θα αναφέρει τις ημέρες άδειας άνευ αποδοχών που χορήγησε για την συμμετοχή του μαθητή / σπουδαστή / φοιτητή στις γραπτές εξετάσεις της σχολής στην οποία είναι εγγεγραμμένος</text>
+  </textAnnotation>
+  <association id="Association_16jxihm">
+    <sourceRef href="#TextAnnotation_0bu6lj8" />
+    <targetRef href="#InputData_067e4h9" />
+  </association>
+  <textAnnotation id="TextAnnotation_1ygm9iz">
+    <text>ή Δελτίο Ταυτότητας Ομογενούς για τους ΄Ελληνες και του Ομογενείς σπουδαστές αντίστοιχα, Διαβατήριο και άδεια διαμονής για τους Αλλοδαπούς σπουδαστές</text>
+  </textAnnotation>
+  <association id="Association_0gukgnv">
+    <sourceRef href="#TextAnnotation_1ygm9iz" />
+    <targetRef href="#InputData_0hzjido" />
+  </association>
+  <textAnnotation id="TextAnnotation_1ukz2o4">
+    <text>υπογεγραμμένη και σφραγισμένη που να αναφέρει ρητά ότι συμμετείχε στις γραπτές εξετάσεις, καθώς επίσης και τις ακριβείς ημερομηνίες των εξετάσεων</text>
+  </textAnnotation>
+  <association id="Association_1s8ubcl">
+    <sourceRef href="#TextAnnotation_1ukz2o4" />
+    <targetRef href="#InputData_1vbn4bc" />
+  </association>
+  <textAnnotation id="TextAnnotation_11opath">
+    <text>που να αποδεικνύει ότι δεν έχει ένσημα για το διάστημα που έκανε χρήση της αδείας</text>
+  </textAnnotation>
+  <association id="Association_0zy0x29">
+    <sourceRef href="#TextAnnotation_11opath" />
+    <targetRef href="#InputData_16po9ij" />
+  </association>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1e7szdu">
+        <dc:Bounds height="80" width="180" x="710" y="200" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1wg2jnl" dmnElementRef="KnowledgeSource_1jh33jw">
+        <dc:Bounds height="63" width="100" x="400" y="209" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1pxg969" dmnElementRef="AuthorityRequirement_1ym4pui">
+        <di:waypoint x="500" y="241" />
+        <di:waypoint x="710" y="240" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_15mkx7c" dmnElementRef="TextAnnotation_0xwre2l">
+        <dc:Bounds height="120" width="340" x="160" y="70" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1c4gwwf" dmnElementRef="Association_1ghpe2a">
+        <di:waypoint x="344" y="190" />
+        <di:waypoint x="400" y="217" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0nrhrj6" dmnElementRef="Decision_0jn15sx">
+        <dc:Bounds height="80" width="180" x="710" y="390" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_19iqzhv" dmnElementRef="InformationRequirement_0hfap2j">
+        <di:waypoint x="800" y="390" />
+        <di:waypoint x="800" y="300" />
+        <di:waypoint x="800" y="280" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1rbod6m" dmnElementRef="InputData_067e4h9">
+        <dc:Bounds height="45" width="125" x="347" y="558" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0w5ueme" dmnElementRef="InputData_0hzjido">
+        <dc:Bounds height="45" width="125" x="548" y="559" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_115qjzs" dmnElementRef="InputData_1vbn4bc">
+        <dc:Bounds height="45" width="125" x="737" y="559" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1r8evzm" dmnElementRef="InputData_0uw2ece">
+        <dc:Bounds height="45" width="125" x="947" y="558" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0a6ewwu" dmnElementRef="InputData_16po9ij">
+        <dc:Bounds height="45" width="125" x="1137" y="558" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0m0v2ng" dmnElementRef="InformationRequirement_11v967e">
+        <di:waypoint x="410" y="558" />
+        <di:waypoint x="740" y="490" />
+        <di:waypoint x="740" y="470" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0tdz7v0" dmnElementRef="InformationRequirement_0a32ckv">
+        <di:waypoint x="611" y="559" />
+        <di:waypoint x="770" y="490" />
+        <di:waypoint x="770" y="470" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1nwdbww" dmnElementRef="InformationRequirement_1nqb0by">
+        <di:waypoint x="800" y="559" />
+        <di:waypoint x="800" y="490" />
+        <di:waypoint x="800" y="470" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1l78d5o" dmnElementRef="InformationRequirement_08w3ptd">
+        <di:waypoint x="1010" y="558" />
+        <di:waypoint x="830" y="490" />
+        <di:waypoint x="830" y="470" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0ydjkc7" dmnElementRef="InformationRequirement_0xzgsk6">
+        <di:waypoint x="1200" y="558" />
+        <di:waypoint x="860" y="490" />
+        <di:waypoint x="860" y="470" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1uoq4j3" dmnElementRef="TextAnnotation_0bu6lj8">
+        <dc:Bounds height="100" width="310" x="115" y="660" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1g3e474" dmnElementRef="Association_16jxihm">
+        <di:waypoint x="247" y="660" />
+        <di:waypoint x="365" y="603" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0dplo48" dmnElementRef="TextAnnotation_1ygm9iz">
+        <dc:Bounds height="80" width="317" x="381" y="780" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0f53yip" dmnElementRef="Association_0gukgnv">
+        <di:waypoint x="461" y="780" />
+        <di:waypoint x="594" y="604" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0kugqs6" dmnElementRef="TextAnnotation_1ukz2o4">
+        <dc:Bounds height="80" width="277" x="670" y="650" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1o1ylnu" dmnElementRef="Association_1s8ubcl">
+        <di:waypoint x="750" y="650" />
+        <di:waypoint x="784" y="604" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0jw8uyp" dmnElementRef="TextAnnotation_11opath">
+        <dc:Bounds height="60" width="190" x="1100" y="650" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0bzzev4" dmnElementRef="Association_0zy0x29">
+        <di:waypoint x="1168" y="650" />
+        <di:waypoint x="1190" y="603" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
