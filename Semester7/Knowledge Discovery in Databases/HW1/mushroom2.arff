@@ -1,0 +1,13 @@
+@relation mushroom_test
+
+@attribute Colour {Purple, Red, Blue}
+@attribute Height {Tall, Short}
+@attribute Stripes {Yes, No}
+@attribute Texture {Rough, Smooth, Hairy}
+@attribute Poisonous {Yes, No}
+
+@data
+Purple, Tall, Yes, Rough, Yes
+Red, Tall, Yes, Smooth, No
+Red, Short, No, Hairy, Yes
+Blue, Short, No, Smooth, No

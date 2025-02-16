@@ -1,0 +1,25 @@
+@relation mushroom_classification
+
+@attribute Colour {Purple, Red, Blue}
+@attribute Height {Short, Tall}
+@attribute Stripes {Yes, No}
+@attribute Texture {Rough, Smooth, Hairy}
+@attribute Poisonous {Yes, No}
+
+@data
+Purple, Tall, Yes, Rough, Yes
+Purple, Tall, Yes, Smooth, Yes
+Red, Short, Yes, Hairy, No
+Blue, Short, No, Smooth, No
+Blue, Short, Yes, Hairy, Yes
+Red, Tall, No, Hairy, No
+Blue, Tall, Yes, Smooth, Yes
+Blue, Short, Yes, Smooth, Yes
+Blue, Tall, No, Hairy, No
+Blue, Short, Yes, Rough, Yes
+Red, Short, No, Smooth, No
+Purple, Short, No, Hairy, Yes
+Red, Tall, Yes, Hairy, No
+Purple, Tall, Yes, Hairy, Yes
+Purple, Tall, No, Rough, No
+Purple, Tall, No, Smooth, No
